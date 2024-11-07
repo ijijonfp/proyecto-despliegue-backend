@@ -1,5 +1,11 @@
 body {
     margin: 0 auto;
+    font-family: 'Noto Serif Malayalam', serif;
+    background-color: bisque;
+}
+
+h2, p{
+    margin: 0 auto;
 }
 
 .home {
@@ -28,7 +34,6 @@ body {
     align-items: center;
 }
 
-
 .img .caratula {
     position: absolute;
     z-index: 2; 
@@ -37,6 +42,11 @@ body {
 .img .vinilo {
     position: absolute;
     z-index: 1; 
+    transition: transform 1.2s ease; 
+}
+
+.img .caratula:hover + .vinilo {
+    transform: translateX(225px)rotate(720deg);
 }
 
 .text {
@@ -46,4 +56,30 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.disco{
+    font-size: 28px;
+}
+
+h1{
+    font-size: 59px;
+}
+
+.descripcion{
+    width: 50%;
+}
+
+.precio{
+    height: 9%;
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: bisque;
+    margin: 25px;
+    background-color: rgb(64, 42, 37);
+    border-radius: 10rem;
 }
