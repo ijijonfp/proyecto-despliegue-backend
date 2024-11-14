@@ -1,7 +1,7 @@
 body {
     margin: 0 auto;
-    font-family: 'Noto Serif Malayalam', serif;
-    background-color: bisque;
+    font-family:'Prata', 'Serif'; 
+    background-color:bisque;
 }
 
 h2, p{
@@ -12,8 +12,15 @@ h2, p{
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.line{
+    height: 2px;
+    width: 80%;
+    background-color: black;
 }
 
 .main {
@@ -25,7 +32,7 @@ h2, p{
     align-items: center;
 }
 
-.img {
+.disc {
     height: 100%;
     width: 50%;
     position: relative;
@@ -34,18 +41,18 @@ h2, p{
     align-items: center;
 }
 
-.img .caratula {
+.disc .caratula {
     position: absolute;
     z-index: 2; 
 }
 
-.img .vinilo {
+.disc .vinilo {
     position: absolute;
     z-index: 1; 
     transition: transform 1.2s ease; 
 }
 
-.img .caratula:hover + .vinilo {
+.disc .caratula:hover + .vinilo {
     transform: translateX(225px)rotate(720deg);
 }
 
@@ -76,10 +83,46 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 28px;
     font-weight: bold;
+    font-size: 28px;
     color: bisque;
-    margin: 25px;
-    background-color: rgb(64, 42, 37);
+    background-color: rgb(63, 42, 25);
     border-radius: 10rem;
+    margin: 25px;
+}
+
+.story {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+}
+
+.storyText {
+    height: 75vh;
+    width: 100%;
+    color: white;
+    background-image: url("/img/Patrón.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.storyText h2 {
+    height: 15%;
+    font-size: 28px;
+    text-align: center; 
+}
+
+.storyText p {
+    width: 42%;
+    font-size: 21px;
+    text-align: center;
 }
