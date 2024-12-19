@@ -6,7 +6,7 @@ $(document).ready(function() {
         } else {
             $("#menuDesplegable").css("right", "0");
         }
-        
+
     });
 
     $("#homeSideBar").click(function(){
