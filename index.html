@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Music For The Masses </title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Music For The Masses</title>
 </head>
 <body>
     <header>
@@ -19,59 +20,66 @@
               <a href="#home">HOME</a>
               <a href="#details">DETALLES</a>
               <a href="#story">HISTORIA</a>
-              <a href="#contact">CONTACTO</a>           
+              <a href="#contact">CONTACTO</a>     
+              <button class="botonDesplegable" id="botonDesplegable">M</button>  
           </nav>
         </div>
       </header>
 
-<div class="home">
-
-    <div class="main">
-        <div class="disc">
-            <img src="img/caratulaVinilo.png" alt="" class="caratula">
-            <img src="img/discoVinilo.png" alt="" class="vinilo">
+    <div class="home" id="home">
+        <div class="main">
+            <div class="disc">
+                <img src="img/caratulaVinilo.png" alt="" class="caratula">
+                <img src="img/discoVinilo.png" alt="" class="vinilo">
+            </div>
+            <div class="text">
+                <h1>Depeche Mode</h1>
+                <p class="descripcion">Descubre la esencia de Depeche Mode con este vinilo clásico y único, una verdadera joya para los fanáticos de la banda. Más que un vinilo, es una pieza de colección que lleva consigo la atmósfera y el estilo de una banda legendaria. Una pieza de colección auténtica que captura el sonido y estilo inconfundible de la banda en su formato original. ¡Perfecto para verdaderos fanáticos!</p>
+                <p class="precio">299.95€</p>
+            </div>
+            <div class="menuDesplegable" id="menuDesplegable">
+              <a href="#home" id="homeSideBar">HOME</a>
+              <a href="#details" id="detailsSideBar">DETALLES</a>
+              <a href="#story" id="storySideBar">HISTORIA</a>
+              <a href="#contact" id="contactSideBar">CONTACTO</a>
+            </div>
         </div>
-        <div class="text">
-            <p class="disco">Music For The Masses</p>
-            <h1>Depeche Mode</h1>
-            <p class="descripcion">Descubre la esencia de Depeche Mode con este vinilo clásico y único, una verdadera joya para los fanáticos de la banda. Más que un vinilo, es una pieza de colección que lleva consigo la atmósfera y el estilo de una banda legendaria. Una pieza de colección auténtica que captura el sonido y estilo inconfundible de la banda en su formato original.  ¡Perfecto para verdaderos fanáticos!</p>
-            <p class="precio">299.95€</p>
+        <div class="line"></div>
+    </div>
+
+    <div class="story" id="story">
+        <div class="storyText">
+            <h2>Historia</h2>
+            <p>Depeche Mode es una de las bandas más influyentes de la música electrónica y el synth-pop, conocida por su sonido único que mezcla melodías oscuras, letras profundas y un toque de innovación. Desde los 80, han dejado una huella en la música mundial, con clásicos como "Enjoy the Silence" y "Personal Jesus". Su estilo atemporal y su capacidad para reinventarse siguen cautivando a generaciones de fans. En nuestra tienda de vinilos, tenemos las ediciones más destacadas de Depeche Mode para los amantes del buen sonido en formato analógico. ¡Ven a descubrirlo!</p>
         </div>
     </div>
-    <div class="line"></div>
-</div>
 
-<div class="story">
-    <div class="storyText">
-        <h2>Historia</h2>
-        <p>Depeche Mode es una de las bandas más influyentes de la música electrónica y el synth-pop, conocida por su sonido único que mezcla melodías oscuras, letras profundas y un toque de innovación. Desde los 80, han dejado una huella en la música mundial, con clásicos como "Enjoy the Silence" y "Personal Jesus". Su estilo atemporal y su capacidad para reinventarse siguen cautivando a generaciones de fans. En nuestra tienda de vinilos, tenemos las ediciones más destacadas de Depeche Mode para los amantes del buen sonido en formato analógico. ¡Ven a descubrirlo!</p>
-    </div>
-</div>
-<footer>
-    <div class="footer-container">
-      <div class="contact-info">
-        <h3>Datos de contacto</h3>
-        <div class="tel"> +34 173 998 456 </div>
-        <div class="address">Av de Suiza, 5, 46188</div>
-        <div class="email">compravinilo@gmail.com</div>
-      </div>
-      <div class="politics">
-          <h3>Información</h3>
-          <ul>
-              <li><a href="">Términos y condiciones</li></a>
-              <li><a href="">Política de privacidad</li></a>
-              <li><a href="">Política de cookies</li></a>
-          </ul>  
-      </div>
-      <div class="newsletter">
-          <label>Suscribete para recibir más información</label>
-          <input type="text">
-          <button type="submit">Suscribirse</button>
-      </div>
-    </div>
-    <div class="author-rights">
-      <p>&copy; 2030 Edición Especial Depeche Mode - All rights reserved </p>
-    </div>
-  </footer>
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Datos de contacto</h3>
+                <div class="tel"> +34 173 998 456 </div>
+                <div class="address">Av de Suiza, 5, 46188</div>
+                <div class="email">compravinilo@gmail.com</div>
+            </div>
+            <div class="politics">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                </ul>  
+            </div>
+            <div class="newsletter">
+                <label>Suscribete para recibir más información</label>
+                <input type="text">
+                <button type="submit">Suscribirse</button>
+            </div>
+        </div>
+        <div class="author-rights">
+            <p>&copy; 2030 Edición Especial Depeche Mode - All rights reserved </p>
+        </div>
+    </footer>
+    <script src="desplegable.js"></script>
 </body>
 </html>
