@@ -361,11 +361,12 @@ h1 {
         border-top-left-radius: 1rem;
         border-bottom-left-radius: 1rem;
         transition: right 0.5s ease;
+        z-index:10;
     }
 
     .menuDesplegable a {
         display: flex;
-        justify-content: center;
+        justify-content: center; 
         width:33%;
         padding: 0.6rem 0.83rem;
         color: bisque;
@@ -380,5 +381,39 @@ h1 {
     .menuDesplegable a:hover {
         color: black;
         background-color: bisque;
+    }
+    
+    .textoFluido {
+      height: 3.5rem;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+      color: white;
+      background-color: #333333;
+      margin: 2rem 0;
+      overflow: hidden;  
+      position: relative;
+    }
+    
+    .textMarkee {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      animation: textMovement 17s linear infinite;  
+    }
+    
+    .textMarkee p{
+      margin: 1rem;
+    }
+
+    @keyframes textMovement {
+      0% {
+        transform: translateX(-200%);  
+      }
+      100% {
+        transform: translateX(200%); 
+      }
     }
     
