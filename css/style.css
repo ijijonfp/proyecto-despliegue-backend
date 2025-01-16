@@ -51,7 +51,7 @@ nav a {
   font-family: "Noto Serif Malayalam", serif;
   padding: 5px 10px;
   border-radius: 5px;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.3s;
 }
 
 nav a:hover {
@@ -160,7 +160,11 @@ h1 {
   height: 75vh;
   width: 100%;
   color: white;
+<<<<<<< HEAD
   background-image: url("./img/fondoHistoria.png");
+=======
+  background-image: url("../img/fondoHistoria.png");
+>>>>>>> f30734d2d20f673b5679a3a4cbf3320604bf3246
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -390,6 +394,47 @@ h1 {
         color: black;
         background-color: bisque;
     }
+
+    .accordion{
+      margin-top: 1rem;
+      margin-left: 2rem; 
+      font-family: 'Prata', 'Serif';
+      font-size: 1rem; 
+      text-align: center;
+      cursor: pointer;
+    }
+    .accordion-toggle{
+      display: flex;
+        justify-content: center;
+        width:33%;
+        padding: 0.6rem 0.83rem;
+        color: bisque;
+        text-decoration: none;
+        font-family: 'Prata', 'Serif'; 
+        border: solid 2px bisque; 
+        border-radius: 10rem;
+        background-color: rgb(63, 42, 25);
+        transition: background-color 0.5s ease, color 0.5s ease; 
+
+    }
+    .accordion-toggle:hover {
+      color: black;
+      background-color: bisque;
+  }
+    .accordion-content {
+      display: none; 
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: bisque;
+      font-family: 'Prata', 'Serif';
+      text-align: justify;
+      padding: 0.5rem 1rem;
+      background-color: rgb(63, 42, 25);
+      border: 1px solid bisque;
+      border-radius: 0.5rem;
+    }
+    
+
     
     .textoFluido {
       height: 3.5rem;
@@ -409,7 +454,7 @@ h1 {
       justify-content: center;
       align-items: center;
       font-size: 22px;
-      animation: textMovement 17s linear infinite;  
+      animation: textMovement 23s linear infinite;  
     }
     
     .textMarkee p{
@@ -418,10 +463,10 @@ h1 {
 
     @keyframes textMovement {
       0% {
-        transform: translateX(-200%);  
+        transform: translateX(200%);  
       }
       100% {
-        transform: translateX(200%); 
+        transform: translateX(-200%); 
       }
     }
-    
+
