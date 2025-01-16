@@ -160,11 +160,7 @@ h1 {
   height: 75vh;
   width: 100%;
   color: white;
-<<<<<<< HEAD
   background-image: url("./img/fondoHistoria.png");
-=======
-  background-image: url("../img/fondoHistoria.png");
->>>>>>> f30734d2d20f673b5679a3a4cbf3320604bf3246
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
