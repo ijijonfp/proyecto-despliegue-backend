@@ -1,5 +1,47 @@
-:root{
-    --colorFondo: bisque;
-    --marronOscuro:rgb(63, 42, 25);
+:root {
+  --colorFondo: bisque;
+  --marronOscuro: rgb(63, 42, 25);
 }
 
+body {
+  margin: 0;
+  min-height: 100vh; /* Asegurar que ocupa toda la ventana*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: red;
+}
+
+.product-details {
+  display: flex;
+  height: 30vh; /* ALTURA*/
+  width: 80vw; /* ANCHURA*/
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  background-color: aqua;
+}
+
+.image-container {  
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(170, 0, 255);
+}
+
+.text-container{
+  height: 100%;
+  width: 60%;
+  background-color: green;
+  display: flex;
+  flex-direction: row;
+}
