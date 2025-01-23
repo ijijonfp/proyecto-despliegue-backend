@@ -1,5 +1,4 @@
 <?php
-
 include_once("configuracion.php");
 
 $sql2= "SELECT idBanda, nombreBanda FROM banda";

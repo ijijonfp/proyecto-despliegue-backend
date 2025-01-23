@@ -2,21 +2,20 @@
 
 include_once("configuracion.php");
 
-$sql="SELECT imagenVinilo, idVinilo, tituloVinilo, idBanda, descripcionVinilo, precioVinilo FROM vinilos";
-$result= $conn->query($sql);
+$sql = "SELECT imagenVinilo, idVinilo, tituloVinilo, idBanda, descripcionVinilo, precioVinilo, visible FROM vinilos";
+
+$result = $conn->query($sql);
 
 $tabla = "";
 
 if ($result->num_rows > 0) {
-    $tabla .= "<table>"; 
-    $tabla .= "<thead><tr>"; 
+    $tabla .= "<table>";
+    $tabla .= "<thead><tr>";
 
     $fields = $result->fetch_fields();
     foreach ($fields as $field) {
-        $tabla .= "<th>" . htmlspecialchars($field->name) . "</th>"; 
+        $tabla .= "<th>" . htmlspecialchars($field->name) . "</th>";
     }
-
-    $tabla .= "<th>Visible</th>"; 
 
     $tabla .= "</tr></thead>";
     $tabla .= "<tbody>";
@@ -25,15 +24,23 @@ if ($result->num_rows > 0) {
         $tabla .= "<tr>";
 
         foreach ($fields as $field) {
-            $tabla .= "<td>" . htmlspecialchars($row[$field->name]) . "</td>"; 
-        }
+            $columna = htmlspecialchars($field->name);
 
-        $tabla .= "<td><a href='ocultarProducto.php?delIdStock=" . $row['idVinilo'] . "'>Visible</a></td>";
+            if ($columna === 'visible') {
+                if ($row['visible'] === 'True') {
+                    $tabla .= "<td><a href='ocultarVinilo.php?idVinyl=" . $row['idVinilo'] . "'>O</a></td>";
+                } else {
+                    $tabla .= "<td><a href='desocultarVinilo.php?idVinyl=" . $row['idVinilo'] . "'>Ø</a></td>";
+                }
+            } else {
+                $tabla .= "<td>" . htmlspecialchars($row[$field->name]) . "</td>";
+            }
+        }
 
         $tabla .= "</tr>";
     }
 
-    $tabla .= "</tbody>"; 
+    $tabla .= "</tbody>";
     $tabla .= "</table>";
 }
 
