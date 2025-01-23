@@ -10,6 +10,7 @@ $tabla = "";
 
 if ($result->num_rows > 0) {
     $tabla .= "<table>";
+    $tabla .= "<div class='tableHeader'";
     $tabla .= "<thead><tr>";
 
     $fields = $result->fetch_fields();
@@ -17,6 +18,7 @@ if ($result->num_rows > 0) {
         $tabla .= "<th>" . htmlspecialchars($field->name) . "</th>";
     }
 
+    $tabla .= "</div>";
     $tabla .= "</tr></thead>";
     $tabla .= "<tbody>";
 

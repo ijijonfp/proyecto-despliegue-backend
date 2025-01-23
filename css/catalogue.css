@@ -1,0 +1,38 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;                  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;   
+    font-family: "Prata", "Serif"; 
+}
+
+.addVinyl {
+    height: 68vh;
+    width: 34vw;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    border-radius: 1rem;
+    position: fixed;
+    top: 13%;
+    z-index: 1;
+    background-color: aqua;
+}
+
+.addVinyl label{
+    font-weight: 700;
+}
+
+.addVinyl input{
+    outline: none;
+    padding: 0.68rem;
+    border-radius: 2rem;
+    border: 1,5px solid black;
+}
