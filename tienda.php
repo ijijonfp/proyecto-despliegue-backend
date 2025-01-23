@@ -19,8 +19,7 @@
             <nav class="navBar">
                 <a href="#home">HOME</a>
                 <a href="#shop">TIENDA</a>
-                <a href="#catalogue">CATALOGO</a>
-                <button class="botonDesplegable" id="botonDesplegable">M</button>
+                <a href="#catalogue">CATALOGO</a>                
             </nav>
         </div>
     </header>
@@ -221,5 +220,33 @@
             </div>
         </div>
     </section>
+    <script src="desplegable.js"></script>
 </body>
+<footer id="contact">
+    <div class="footer-container">
+        <div class="contact-info">
+            <h3>Datos de contacto</h3>
+            <div class="tel">+34 173 998 456</div>
+            <div class="address">Av de Suiza, 5, 46188</div>
+            <div class="email">compravinilo@gmail.com</div>
+        </div>
+        <div class="politics">
+            <h3>Información</h3>
+            <ul>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Política de cookies</a></li>
+            </ul>
+        </div>
+        <div class="newsletter">
+            <label>Suscribete para recibir más información</label>
+            <input type="text" />
+            <button type="submit">Suscribirse</button>
+        </div>
+    </div>
+    <div class="author-rights">
+        <p>&copy; 2030 Edición Especial Depeche Mode - All rights reserved</p>
+    </div>
+</footer>
+
 </html>
