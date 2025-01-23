@@ -36,7 +36,7 @@ if ($result2->num_rows > 0) {
 
     <form action="añadirVinilo.php" method="POST" enctype="multipart/form-data" class="addVinyl">
         <label for="name">Nombre</label>
-        <input type="text" name="vinylName" id="vinylName" placeholder="Nombre del vinilo.">
+        <input type="text" name="vinylName" id="vinylName" placeholder="Nombre del vinilo">
         <label for="name">Banda</label>
         <?php echo $selectBanda; ?>
         <label for="name">Descripción</label>
