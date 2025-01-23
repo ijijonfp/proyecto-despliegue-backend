@@ -27,13 +27,15 @@ if ($result2->num_rows > 0) {
 
     <?php include_once("tablaCatalogo.php"); ?>
 
-    <form action="php/añadirVinilo.php" method="POST">
-        <input type="text" name="vinylName" id="vinylName" placeHolder="Nombre del vinilo.">
-        <?php echo $selectBanda; ?>
-        <input type="text" name="vinylDescription" id="vinylDescription" placeholder="Descripción del vinilo">
-        <input type="text" name="vinylPrice" id="vinylPrice" placeholder="Precio del vinilo">
-        <button type="subtmi">Añadir</button>
-    </form>
+    <form action="añadirVinilo.php" method="POST" enctype="multipart/form-data">
+    <input type="text" name="vinylName" id="vinylName" placeholder="Nombre del vinilo.">
+    <?php echo $selectBanda; ?>
+    <input type="text" name="vinylDescription" id="vinylDescription" placeholder="Descripción del vinilo">
+    <input type="text" name="vinylPrice" id="vinylPrice" placeholder="Precio del vinilo">
+    <input type="file" name="vinylImage" id="vinylImage" accept="image/*" required>
+    <button type="submit">Añadir</button>
+</form>
+
     
 </body>
 </html>
