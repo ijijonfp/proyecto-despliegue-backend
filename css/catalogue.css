@@ -1,100 +1,134 @@
 html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    font-family: "Prata", "Serif";
-  }
-  
-  .tableContainer {
-    width: 75vw;
-    max-height: 75vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: scroll; 
-    border-radius: 10px;
-    padding: 1rem;
-  }
-  
+  scroll-behavior: smooth;
+}
 
-  .tableContainer::-webkit-scrollbar {
-    width: 6px;  
-  }
-  
-  .tableContainer::-webkit-scrollbar-thumb {
-    background-color: rgb(128, 128, 128);  
-    border-radius: 10px;      
-  }
-  
-  .tableContainer::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 10px; 
-  }
-  
-  .rowContainer {
-    height: 10vh;
-    margin-top:1rem;
-    margin-bottom:1rem;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .vinylImage {
-    padding: 3.4rem;
-    margin-top:1rem;
-    margin-bottom: 1rem;
-    background-size: cover;
-    border-radius: 0.5rem;
-  }
-  
-  .addVinyl {
-    height: 68vh;
-    width: 34vw;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    border: 2px solid black;
-    border-radius: 1rem;
-    position: fixed;
-    top: 13%;
-    z-index: 1;
-    background-color: rgb(255, 228, 200);
-    display: none; 
-  }
-  
-  .addVinyl label {
-    font-weight: 700;
-  }
-  
-  .addVinyl input,
-  select,
-  button {
-    outline: none;
-    padding: 0.68rem;
-    border-radius: 2rem;
-    border: 1.5px solid black; 
-  }
-  
-  .addVinyl button {
-    background-color: aqua;
-  }
-  
-  .addDisc{
-    padding: 1.9rem;
-    border-radius: 12rem;
-  }
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Prata", "Serif";
+  background-color: bisque;
+}
 
-  .addVinylContainer{
-    width: 13vw;
-    display: flex;
-    justify-content: center;
-  }
+.buscadorContainer {
+  height: 20vh;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+.buscador{
+  padding: 0.8rem;
+  width: 28rem;
+  border-radius: 2rem;
+  border: none;
+  border: 2px solid black;
+}
+
+.tableContainer {
+  width: 80vw;
+  max-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  border-bottom: 2px solid black;
+}
+
+.tableContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.rowContainer {
+  height: 10vh;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vinylImage {
+  padding: 3.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+
+.addVinyl {
+  height: 64vh;
+  width: 28vw;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  border-radius: 1rem;
+  position: fixed;
+  top: 16%;
+  z-index: 1;
+  background-color: rgb(255, 228, 200);
+  display: none;
+}
+
+.addVinyl label {
+  font-weight: 700;
+}
+
+.addVinyl input,
+select,
+button {
+  outline: none;
+  padding: 0.68rem;
+  border-radius: 2rem;
+  border: 1.5px solid black;
+}
+
+.addVinyl button {
+  background-color: aqua;
+}
+.addDisc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 58px;
+  width: 58px;
+  border: solid 2px rgb(63, 42, 25);
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+  font-size: 42px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.addDisc:hover {
+  background-color: rgb(63, 42, 25);
+  color: white;
+}
+
+.addVinylContainer {
+  height: 20vh;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo inicial del formulario oculto */
+.addVinyl {
+  display: none;
+  flex-direction: column;
+  /* Otros estilos para el formulario */
+}
+
+/* Cuando se aplica el filtro blur */
+.blurred {
+  filter: blur(5px);  /* Ajusta el nivel de desenfoque a tu preferencia */
+  pointer-events: none; /* Esto evita que el contenido desenfocado sea interactivo */
+}
