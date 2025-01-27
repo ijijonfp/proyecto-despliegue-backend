@@ -1,17 +1,61 @@
 html {
     scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;                  
+  }
+  
+  body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    font-family: "Prata", "Serif";
+  }
+  
+  .tableContainer {
+    width: 75vw;
+    max-height: 75vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;  
-    align-items: center;   
-    font-family: "Prata", "Serif"; 
-}
+    align-items: center;
+    overflow-y: scroll; 
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  
 
-.addVinyl {
+  .tableContainer::-webkit-scrollbar {
+    width: 6px;  
+  }
+  
+  .tableContainer::-webkit-scrollbar-thumb {
+    background-color: rgb(128, 128, 128);  
+    border-radius: 10px;      
+  }
+  
+  .tableContainer::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px; 
+  }
+  
+  .rowContainer {
+    height: 10vh;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .vinylImage {
+    padding: 3.4rem;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    background-size: cover;
+    border-radius: 0.5rem;
+  }
+  
+  .addVinyl {
     height: 68vh;
     width: 34vw;
     padding: 1rem;
@@ -23,16 +67,34 @@ body {
     position: fixed;
     top: 13%;
     z-index: 1;
-    background-color: aqua;
-}
-
-.addVinyl label{
+    background-color: rgb(255, 228, 200);
+    display: none; 
+  }
+  
+  .addVinyl label {
     font-weight: 700;
-}
-
-.addVinyl input, select, file{
+  }
+  
+  .addVinyl input,
+  select,
+  button {
     outline: none;
     padding: 0.68rem;
     border-radius: 2rem;
-    border: 1,5px solid black;
-}
+    border: 1.5px solid black; 
+  }
+  
+  .addVinyl button {
+    background-color: aqua;
+  }
+  
+  .addDisc{
+    padding: 1.9rem;
+    border-radius: 12rem;
+  }
+
+  .addVinylContainer{
+    width: 13vw;
+    display: flex;
+    justify-content: center;
+  }

@@ -28,11 +28,18 @@ if ($result2->num_rows > 0) {
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/catalogue.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
     <title>OldVinylBack</title>
 </head>
 <body>
     
-    <?php include_once("tablaCatalogo.php"); ?>
+    <div class="tableContainer">
+        <?php include_once("tablaCatalogo.php"); ?>
+    </div>
 
     <form action="añadirVinilo.php" method="POST" enctype="multipart/form-data" class="addVinyl">
         <label for="name">Nombre</label>
@@ -48,6 +55,11 @@ if ($result2->num_rows > 0) {
         <button type="submit">Añadir</button>
 </form>
 
+<div class="addVinylContainer">
+    <button type="button" id="addDisc" class="addDisc">+</button>
+</div>
+
     
+<script src="../js/añadirVinilo.js"></script>
 </body>
 </html>

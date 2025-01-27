@@ -9,40 +9,30 @@ $result = $conn->query($sql);
 $tabla = "";
 
 if ($result->num_rows > 0) {
-    $tabla .= "<table>";
-    $tabla .= "<div class='tableHeader'";
-    $tabla .= "<thead><tr>";
-
-    $fields = $result->fetch_fields();
-    foreach ($fields as $field) {
-        $tabla .= "<th>" . htmlspecialchars($field->name) . "</th>";
-    }
-
-    $tabla .= "</div>";
-    $tabla .= "</tr></thead>";
-    $tabla .= "<tbody>";
+    $tabla .= "<table class='styled-table'>";
 
     while ($row = $result->fetch_assoc()) {
-        $tabla .= "<tr>";
+        $tabla .= "<tr class='rowContainer'>";
 
-        foreach ($fields as $field) {
-            $columna = htmlspecialchars($field->name);
-
-            if ($columna === 'visible') {
-                if ($row['visible'] === 'True') {
+        foreach ($row as $key => $value) {
+            if ($key === 'imagenVinilo') {
+                $tabla .= "<td><div class='vinylImage' style='background-image: url(" . htmlspecialchars($value) . ");'></div></td>";
+            } elseif ($key === 'idVinilo') {
+                $tabla .= "<td style='display: none;'>" . htmlspecialchars($value) . "</td>";
+            } elseif ($key === 'visible') {
+                if ($value === 'True') {
                     $tabla .= "<td><a href='ocultarVinilo.php?idVinyl=" . $row['idVinilo'] . "'>O</a></td>";
                 } else {
                     $tabla .= "<td><a href='desocultarVinilo.php?idVinyl=" . $row['idVinilo'] . "'>Ø</a></td>";
                 }
             } else {
-                $tabla .= "<td>" . htmlspecialchars($row[$field->name]) . "</td>";
+                $tabla .= "<td>" . htmlspecialchars($value) . "</td>";
             }
         }
 
         $tabla .= "</tr>";
     }
 
-    $tabla .= "</tbody>";
     $tabla .= "</table>";
 }
 
