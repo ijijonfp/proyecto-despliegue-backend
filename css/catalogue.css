@@ -16,7 +16,7 @@ body {
 
 .buscadorContainer {
   height: 20vh;
-  width: 80vw;
+  width: 70vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,33 +32,70 @@ body {
 }
 
 .tableContainer {
-  width: 80vw;
+  width: 68vw;
   max-height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
-  border-bottom: 2px solid black;
 }
 
 .tableContainer::-webkit-scrollbar {
   display: none;
 }
 
+.styled-table {
+  width: 100%; 
+  border-collapse: collapse; 
+  table-layout: fixed; 
+}
+
+.styled-table td, .styled-table th {
+  display: flex;
+  justify-content: center;
+  padding: 1rem; 
+  text-align: center; 
+  vertical-align: middle; 
+  width: 10%; 
+  border: none; 
+}
+
 .rowContainer {
-  height: 10vh;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .vinylImage {
-  padding: 3.4rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  background-size: cover;
-  border-radius: 0.5rem;
+  height: 6.6rem;
+  width: 8rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0.7rem;
+}
+
+.visibleImg{
+  height: 2.3rem;
+  width: 2.3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/visible.png");
+  background-color: rgb(15, 15, 15);
+  background-size: 70%;
+  border-radius: 2rem;
+}
+
+.invisibleImg{
+  height: 2.3rem;
+  width: 2.3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/invisible.png");
+  background-color: rgb(15, 15, 15);
+  background-size: 70%;
+  border-radius: 2rem;
 }
 
 .addVinyl {
@@ -93,6 +130,7 @@ button {
 .addVinyl button {
   background-color: aqua;
 }
+
 .addDisc {
   display: flex;
   justify-content: center;
@@ -114,21 +152,9 @@ button {
 
 .addVinylContainer {
   height: 20vh;
-  width: 80vw;
+  width: 70vw;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* Estilo inicial del formulario oculto */
-.addVinyl {
-  display: none;
-  flex-direction: column;
-  /* Otros estilos para el formulario */
-}
-
-/* Cuando se aplica el filtro blur */
-.blurred {
-  filter: blur(5px);  /* Ajusta el nivel de desenfoque a tu preferencia */
-  pointer-events: none; /* Esto evita que el contenido desenfocado sea interactivo */
+  border-top: 2px solid black;
 }
