@@ -37,7 +37,6 @@ if ($result->num_rows > 0) {
                     $tabla .= "<td><a href='desocultarVinilo.php?idVinyl=" . $row['idVinilo'] . "'><div class='invisibleImg'></div></a></td>";
                 }
             } elseif ($key === 'precioVinilo') {
-                // Aquí añadimos el símbolo de euro al precio
                 $tabla .= "<td>" . htmlspecialchars($value) . " €</td>";
             } else {
                 $tabla .= "<td>" . htmlspecialchars($value) . "</td>";
