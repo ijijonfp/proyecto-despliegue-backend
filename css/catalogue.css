@@ -8,7 +8,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Prata", "Serif";
+  font-family: "Poppins";
+  font-weight: 500;
   background-color: bisque;
 }
 
@@ -108,36 +109,45 @@ body {
   border-top: 2px solid black;
 }
 
+.addDiscContainer{
+  display: flex;
+  justify-content: center;
+}
+
 .addDisc {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 58px;
   height: 58px;
-  font-size: 42px;
-  border: 3px solid rgb(63, 42, 25);
+  width: 58px;
+  border: solid 3px rgb(63, 42, 25);
   background-color: transparent;
   font-family: "Poppins", sans-serif;
+  font-size: 42px;
   cursor: pointer;
-  z-index: 2;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+  color: rgb(15, 15, 15); 
+}
+
+.addDisc.rotated {
+  color: bisque; 
 }
 
 .addDisc:hover {
   background-color: rgb(63, 42, 25);
-  color: white;
+  color: bisque;
 }
 
 .formContainer {
   position: fixed;
   bottom: -100%;
-  left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgb(63, 42, 25);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   z-index: 1;
   transition: bottom 0.5s ease;
 }
@@ -147,16 +157,22 @@ body {
 }
 
 .addVinyl {
-  width: 28vw;
-  height: 64vh;
-  padding: 1rem;
+  width: 38vw;
+  height: 83vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border-radius: 1rem;
-  position: fixed;
-  display: none;
-  z-index: 1;
+  margin-top: 1.9rem;
+  color:rgb(238, 238, 238);
+  font-family: "Poppins";
+  font-size: 19px;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.addVinyl.visible {
+  opacity: 1;
 }
 
 .addVinyl label {
@@ -165,11 +181,24 @@ body {
 
 .addVinyl input, select, button {
   padding: 0.68rem;
-  border: 1.5px solid black;
+  font-family: "Poppins";
+  border: none;
   border-radius: 2rem;
   outline: none;
 }
 
 .addVinyl button {
-  background-color: aqua;
+  width: 6rem;
+  border: 2px solid bisque;
+  background-color: transparent;
+  color: bisque;
+  font-size: 19px;
+  font-weight: 600;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.addVinyl button:hover{
+  color: black; 
+  background-color: bisque;
+  cursor: pointer;
 }
