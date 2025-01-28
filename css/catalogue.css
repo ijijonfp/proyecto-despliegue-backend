@@ -4,14 +4,21 @@ html {
 
 body {
   margin: 0;
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Prata", "Serif";
   background-color: bisque;
+}
+
+.catalogoContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .buscadorContainer {
@@ -23,12 +30,11 @@ body {
   border-bottom: 2px solid black;
 }
 
-.buscador{
-  padding: 0.8rem;
+.buscador {
   width: 28rem;
-  border-radius: 2rem;
-  border: none;
+  padding: 0.8rem;
   border: 2px solid black;
+  border-radius: 2rem;
 }
 
 .tableContainer {
@@ -45,19 +51,18 @@ body {
 }
 
 .styled-table {
-  width: 100%; 
-  border-collapse: collapse; 
-  table-layout: fixed; 
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .styled-table td, .styled-table th {
-  display: flex;
+  width: 20%;
+  padding: 1rem;
+  text-align: center;
+  vertical-align: middle;
   justify-content: center;
-  padding: 1rem; 
-  text-align: center; 
-  vertical-align: middle; 
-  width: 20%; 
-  border: none; 
+  display: flex;
 }
 
 .rowContainer {
@@ -68,86 +73,30 @@ body {
 }
 
 .vinylImage {
-  height: 7rem;
   width: 7rem;
+  height: 7rem;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0.7rem;
 }
 
-.visibleImg{
-  height: 2.3rem;
+.visibleImg, .invisibleImg {
   width: 2.3rem;
+  height: 2.3rem;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: rgb(15, 15, 15);
+  background-size: 70%;
+  border-radius: 2rem;
+}
+
+.visibleImg {
   background-image: url("../img/visible.png");
-  background-color: rgb(15, 15, 15);
-  background-size: 70%;
-  border-radius: 2rem;
 }
 
-.invisibleImg{
-  height: 2.3rem;
-  width: 2.3rem;
-  background-position: center;
-  background-repeat: no-repeat;
+.invisibleImg {
   background-image: url("../img/invisible.png");
-  background-color: rgb(15, 15, 15);
-  background-size: 70%;
-  border-radius: 2rem;
-}
-
-.addVinyl {
-  height: 64vh;
-  width: 28vw;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  border: 2px solid black;
-  border-radius: 1rem;
-  position: fixed;
-  top: 16%;
-  z-index: 1;
-  background-color: rgb(255, 228, 200);
-  display: none;
-}
-
-.addVinyl label {
-  font-weight: 700;
-}
-
-.addVinyl input,
-select,
-button {
-  outline: none;
-  padding: 0.68rem;
-  border-radius: 2rem;
-  border: 1.5px solid black;
-}
-
-.addVinyl button {
-  background-color: aqua;
-}
-
-.addDisc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 58px;
-  width: 58px;
-  border: solid 3px rgb(63, 42, 25);
-  background-color: transparent;
-  font-family: "Poppins", sans-serif;
-  font-size: 42px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.addDisc:hover {
-  background-color: rgb(63, 42, 25);
-  color: white;
 }
 
 .addVinylContainer {
@@ -157,4 +106,70 @@ button {
   justify-content: center;
   align-items: center;
   border-top: 2px solid black;
+}
+
+.addDisc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+  font-size: 42px;
+  border: 3px solid rgb(63, 42, 25);
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.addDisc:hover {
+  background-color: rgb(63, 42, 25);
+  color: white;
+}
+
+.formContainer {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(63, 42, 25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: bottom 0.5s ease;
+}
+
+.formContainer.visible {
+  bottom: 0;
+}
+
+.addVinyl {
+  width: 28vw;
+  height: 64vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 1rem;
+  position: fixed;
+  display: none;
+  z-index: 1;
+}
+
+.addVinyl label {
+  font-weight: 700;
+}
+
+.addVinyl input, select, button {
+  padding: 0.68rem;
+  border: 1.5px solid black;
+  border-radius: 2rem;
+  outline: none;
+}
+
+.addVinyl button {
+  background-color: aqua;
 }

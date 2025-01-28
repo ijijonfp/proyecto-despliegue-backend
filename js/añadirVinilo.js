@@ -1,17 +1,15 @@
-    $(document).ready(function() {
-        // Mostrar o cerrar el formulario al hacer clic en el botón
-        $("#addDisc").click(function(event) {
-            // Prevenir que el clic en el botón se propague
-            event.stopPropagation();
+$(document).ready(function () {
 
-            // Alternar la visibilidad del formulario y mantener la estructura
-            $(".addVinyl").css("display", function(index, value) {
-                return value === "none" ? "flex" : "none";  // Alternar entre "none" y "flex"
-            });
-        });
+    $("#addDisc").click(function () {
 
-        // Evitar que el clic dentro del formulario cierre el formulario
-        $(".addVinyl").click(function(event) {
-            event.stopPropagation();
-        });
+      $(".formContainer").toggleClass("visible");
+
+      const isRotated = $(".addDisc").hasClass("rotated");
+      if (isRotated) {
+        $(".addDisc").removeClass("rotated").css("transform", "rotate(0deg)");
+      } else {
+        $(".addDisc").addClass("rotated").css("transform", "rotate(135deg)");
+      }
     });
+  });
+  
