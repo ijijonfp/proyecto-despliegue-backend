@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-01-2025 a las 09:02:24
+-- Tiempo de generación: 29-01-2025 a las 17:54:46
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -88,11 +88,14 @@ CREATE TABLE `vinilos` (
 --
 
 INSERT INTO `vinilos` (`idVinilo`, `tituloVinilo`, `descripcionVinilo`, `precioVinilo`, `imagenVinilo`, `visible`, `idBanda`) VALUES
-(1, 'Queen 2', 'Queen II (1974) es un álbum conceptual dividido en \"Lado Blanco\" y \"Lado Negro\". Combina rock progresivo y fantasía con temas épicos como \"Ogre Battle\" y \"The March of the Black Queen\".', 99.95, 'img/Queen2.png', 'True', 1),
-(2, 'Appetite for Destruction', 'Appetite for Destruction (1987) es el debut de Guns N\' Roses, cargado de hard rock y actitud rebelde. Incluye clásicos como \"Sweet Child O\' Mine\" y \"Welcome to the Jungle\".', 79.95, 'img/AppetiteForDestruction.png', 'True', 2),
-(3, 'The Joshua Tree', 'The Joshua Tree (1987) es el icónico álbum de U2, inspirado en paisajes y espiritualidad. Mezcla rock y melodías emotivas con éxitos como \"With or Without You\" y \"Where the Streets Have No Name\".', 79.95, 'img/TheJoshuaTree.png', 'True', 3),
-(4, 'Like  Prayer', 'Like a Prayer (1989) es un álbum icónico de Madonna, combinando pop y temas introspectivos. Incluye éxitos como \"Like a Prayer\" y \"Express Yourself\", marcando su madurez artística.', 109.95, 'img/LikeAPrayer.png', 'True', 4),
-(5, 'True', 'True (1983) es el álbum más emblemático de Spandau Ballet, mezclando pop y soul elegante. Destaca por el éxito mundial \"True\" y temas como \"Gold\", redefiniendo el sonido romántico de los 80.', 199.95, 'img/True.png', 'True', 5);
+(1, 'Queen 2', 'Queen II (1974) es un álbum conceptual dividido en \"Lado Blanco\" y \"Lado Negro\". Combina rock progresivo y fantasía con temas épicos como \"Ogre Battle\" y \"The March of the Black Queen\".', 99.95, '../img/Queen2.png', 'True', 1),
+(2, 'Appetite for Destruction', 'Appetite for Destruction (1987) es el debut de Guns N\' Roses, cargado de hard rock y actitud rebelde. Incluye clásicos como \"Sweet Child O\' Mine\" y \"Welcome to the Jungle\".', 79.95, '../img/AppetiteForDestruction.png', 'True', 2),
+(3, 'The Joshua Tree', 'The Joshua Tree (1987) es el icónico álbum de U2, inspirado en paisajes y espiritualidad. Mezcla rock y melodías emotivas con éxitos como \"With or Without You\" y \"Where the Streets Have No Name\".', 79.95, '../img/TheJoshuaTree.png', 'True', 3),
+(4, 'Like  Prayer', 'Like a Prayer (1989) es un álbum icónico de Madonna, combinando pop y temas introspectivos. Incluye éxitos como \"Like a Prayer\" y \"Express Yourself\", marcando su madurez artística.', 109.95, '../img/LikeAPrayer.png', 'True', 4),
+(5, 'True', 'True (1983) es el álbum más emblemático de Spandau Ballet, mezclando pop y soul elegante. Destaca por el éxito mundial \"True\" y temas como \"Gold\", redefiniendo el sonido romántico de los 80.', 199.95, '../img/True.png', 'True', 5),
+(7, 'Parade', 'Parade (1984) es el cuarto álbum de Spandau Ballet, con un sonido más maduro y experimental. Incluye éxitos como \"Only When You Leave\" y \"I Know This Much Is True\", fusionando pop, new wave y sofistic', 129.95, '../img/imgParade.png', 'True', 5),
+(8, 'Use Your Illusion', ' Use Your Illusion I (1991) de Guns N\' Roses es un álbum doble que incluye éxitos como \"November Rain\", \"Don\'t Cry\" y \"Live and Let Die\". Es una mezcla épica de rock y baladas.', 105.95, '../img/useYourIllusion.jpg', 'True', 2),
+(9, 'The Dreaming', 'The Dreaming (1982) de Kate Bush es un álbum experimental y teatral, lleno de sonidos innovadores, letras narrativas y emotivas. Explora temas oscuros y mágicos con su inigualable creatividad.', 49.95, '../img/theDreaming.jpg', 'True', 6);
 
 --
 -- Índices para tablas volcadas
@@ -138,7 +141,7 @@ ALTER TABLE `generos`
 -- AUTO_INCREMENT de la tabla `vinilos`
 --
 ALTER TABLE `vinilos`
-  MODIFY `idVinilo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idVinilo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
