@@ -39,6 +39,7 @@ if ($result2->num_rows > 0) {
         <div class="buscadorContainer">
             <input type="text" class="buscador" name="buscador" id="buscador" placeholder="Busca tu vinilo">
         </div>
+     
 
         <div class="tableContainer">
             <?php include_once("tablaCatalogo.php"); ?>
