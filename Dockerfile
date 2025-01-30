@@ -1,10 +1,13 @@
-# Usar la imagen oficial de PHP con Apache
+# Usar PHP con Apache
 FROM php:8.1-apache
 
-# Copiar el código del proyecto dentro del servidor web
+# Instalar extensiones de PHP necesarias para MySQL
+RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable mysqli
+
+# Copiar todo el código del proyecto
 COPY . /var/www/html/
 
-# Exponer el puerto 80 para servir la aplicación
+# Exponer el puerto 80
 EXPOSE 80
 
 # Iniciar Apache
